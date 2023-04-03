@@ -1,0 +1,7 @@
+GStreamer
+You can use GStreamer to take 1080p 30fps video. This uses the included H264 encoding plugin for i.MX 8M Mini. Here's an example pipeline you can run on your NavQ to take video:
+$ sudo gst-launch-1.0 v4l2src ! vpuenc_h264 ! avimux ! filesink location='video.avi'
+When you want to end the video, just press Ctrl+C to cancel the pipeline, and the file should be saved to the present directory.
+OpenCV
+To record video with your NavQ, you can run this simple python script that uses OpenCV to write video to a file:
+This is a simple example that you can use as a starting point for even bigger things with OpenCV/computer vision! If you'd like a more sophisticated guide that runs through example code to detect red objects, head to the  to find more
